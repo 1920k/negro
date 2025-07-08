@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho de Sociologia</title>
+    <style>
+        body {
+            background: #f4f4f9;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        .capa {
+            background: linear-gradient(120deg, #222 60%, #bfa14a 100%);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px 40px 20px;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+            box-shadow: 0 4px 24px #bfa14a44;
+        }
+        .capa h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        .capa p {
+            font-size: 1.2em;
+            margin: 8px 0;
+        }
+        .sumario {
+            background: #fffbe6;
+            border-left: 6px solid #bfa14a;
+            margin: 40px auto 32px auto;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #bfa14a22;
+            padding: 24px 32px;
+        }
+        .sumario h2 {
+            color: #bfa14a;
+            margin-top: 0;
+        }
+        .sumario ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sumario li {
+            margin: 12px 0;
+        }
+        .sumario a {
+            color: #bfa14a;
+            text-decoration: underline;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+        .conteudo {
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            padding: 0 16px;
+        }
+        section {
+            margin-bottom: 48px;
+        }
+        section h2 {
+            color: #bfa14a;
+            margin-top: 0;
+        }
+        .card-pop {
+            background: #fffbe6;
+            border-left: 6px solid #bfa14a;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #e0c97f;
+            padding: 18px 20px;
+            margin: 24px 0 0 0;
+            display: none;
+            position: relative;
+            animation: fly 2.5s ease-in-out;
+        }
+        .card-pop.show {
+            display: block;
+        }
+        .card-pop .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 18px;
+            background: #bfa14a;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .card-pop img {
+            width: 60px;
+            float: left;
+            margin-right: 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #e0c97f;
+        }
+        @keyframes fly {
+            0% { transform: translateY(20px) scale(0.95); opacity: 0; }
+            100% { transform: translateY(0) scale(1); opacity: 1; }
+        }
+        @media (max-width: 700px) {
+            .capa { padding: 32px 6px 24px 6px; }
+            .sumario { padding: 16px 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="capa">
+        <h1>Trabalho de Sociologia</h1>
+        <p><strong>Aluno:</strong> Seu Nome</p>
+        <p><strong>Turma:</strong> 2º Ano</p>
+        <p><strong>Data:</strong> 08/07/2025</p>
+        <img src="https://img.icons8.com/fluency/96/classroom.png" alt="Capa" style="margin-top:24px;">
+    </div>
+    <div class="sumario">
+        <h2>Sumário</h2>
+        <ul>
+            <li><a onclick="scrollToSection('quilombolas')">A População Quilombola do Brasil</a></li>
+            <li><a onclick="scrollToSection('cardq1')">Quem são os Quilombolas?</a></li>
+            <li><a onclick="scrollToSection('cardq2')">A Origem dos Quilombos</a></li>
+            <li><a onclick="scrollToSection('cardq3')">Quilombo dos Palmares e Zumbi</a></li>
+            <li><a onclick="scrollToSection('cardq4')">Cultura e Tradições</a></li>
+            <li><a onclick="scrollToSection('cardq5')">Desafios Atuais</a></li>
+            <li><a onclick="scrollToSection('cardq6')">Curiosidades</a></li>
+            <li><a onclick="scrollToSection('cardq7')">Conclusão</a></li>
+            <li><a onclick="scrollToSection('cardq8')">Referências</a></li>
+        </ul>
+    </div>
+    <div class="conteudo">
+        <section id="quilombolas">
+            <h2>A Resistência Vive: A História e Cultura da População Negra Quilombola</h2>
+            <p>Você já ouviu falar dos quilombolas? Eles são os herdeiros de uma história de coragem, resistência e cultura vibrante. Neste trabalho, vamos explorar quem são essas pessoas incríveis, como surgiram os quilombos e por que eles ainda são tão importantes para o Brasil de hoje.</p>
+            <button onclick="showCard('cardq1')">Quem são os Quilombolas?</button>
+            <div class="card-pop" id="cardq1">
+                <button class="close-btn" onclick="hideCard('cardq1')">&times;</button>
+                <img src="https://img.icons8.com/fluency/96/africa.png" alt="Quilombolas">
+                <strong>Definição:</strong> Os quilombolas são descendentes de africanos escravizados que fugiram da opressão e formaram comunidades autônomas chamadas quilombos. Essas comunidades existem até hoje e são reconhecidas pela Constituição Brasileira como grupos étnico-raciais com direito à terra.
+            </div>
+            <button onclick="showCard('cardq2')">A Origem dos Quilombos</button>
+            <div class="card-pop" id="cardq2">
+                <button class="close-btn" onclick="hideCard('cardq2')">&times;</button>
+                <img src="https://img.icons8.com/fluency/96/forest.png" alt="Origem dos Quilombos">
+                <strong>Origem:</strong> A palavra "quilombo" vem do termo africano "kilombo", que significa "acampamento de guerra". No Brasil, os quilombos surgiram como refúgios de resistência contra a escravidão, geralmente em locais de difícil acesso, como florestas e montanhas.
+            </div>
+            <button onclick="showCard('cardq3')">Quilombo dos Palmares e Zumbi</button>
+            <div class="card-pop" id="cardq3">
+                <button class="close-btn" onclick="hideCard('cardq3')">&times;</button>
+                <img src="https://img.icons8.com/fluency/96/warrior-shield.png" alt="Palmares e Zumbi">
+                <strong>Palmares:</strong> O mais famoso dos quilombos foi o Quilombo dos Palmares, localizado na atual Alagoas. Ele chegou a ter cerca de 20 mil habitantes e resistiu por quase 100 anos! Seu líder mais conhecido foi Zumbi dos Palmares, símbolo da luta contra a escravidão.
+            </div>
+            <button onclick="showCard('cardq4')">Cultura e Tradições Quilombolas</button>
+            <div class="card-pop" id="cardq4">
+                <button class="close-btn" onclick="hideCard('cardq4')">&times;</button>
+                <img src="https://img.icons8.com/fluency/96/music.png" alt="Cultura Quilombola">
+                <strong>Cultura:</strong> As comunidades quilombolas mantêm viva uma rica herança cultural africana: capoeira, culinária típica, religiões de matriz africana, festas, cantos e contação de histórias.
+            </div>
+            <button onclick="showCard('cardq5')">Desafios Atuais</button>
+            <div class="card-pop" id="cardq5">
+                <button class="close-btn" onclick="hideCard('cardq5')">&times;</button>
+                <img src="https://img.icons8.com/fluency/96/warning-shield.png" alt="Desafios">
+                <strong>Desafios:</strong> Apesar de sua importância histórica, os quilombolas ainda enfrentam dificuldade no acesso à saúde, educação, demarcação de terras e racismo estrutural.
+            </div>
+            <button onclick="showCard('cardq6')">Curiosidades</button>
+            <div class="card-pop" id="cardq6">
+                <button class="close-btn" onclick="hideCard('cardq6')">&times;</button>
+                <img src="https://img.icons8.com/fluency/96/question-mark.png" alt="Curiosidades">
+                <strong>Curiosidades:</strong>
+                <ul>
+                    <li>O Quilombo dos Palmares era tão grande que tinha “mocambos” — pequenas aldeias escondidas.</li>
+                    <li>Zumbi sabia latim, matemática e astronomia!</li>
+                    <li>O Dia da Consciência Negra (20 de novembro) homenageia Zumbi dos Palmares.</li>
+                </ul>
+            </div>
+            <button onclick="showCard('cardq7')">Conclusão</button>
+            <div class="card-pop" id="cardq7">
+                <button class="close-btn" onclick="hideCard('cardq7')">&times;</button>
+                <img src="https://img.icons8.com/fluency/96/checked-checkbox.png" alt="Conclusão">
+                <strong>Conclusão:</strong> Os quilombolas são protagonistas de uma luta contínua por justiça, identidade e cultura. Conhecer e valorizar essas comunidades é essencial para construir um Brasil mais justo e plural.
+            </div>
+            <button onclick="showCard('cardq8')">Referências</button>
+            <div class="card-pop" id="cardq8">
+                <button class="close-btn" onclick="hideCard('cardq8')">&times;</button>
+                <img src="https://img.icons8.com/fluency/96/open-book--v2.png" alt="Referências">
+                <strong>Referências:</strong>
+                <ul>
+                    <li><a href="https://rabiscodahistoria.com/quilombolas-resistencia-e-identidade-na-comunidade-negra/" target="_blank">Quilombolas: Resistência e Identidade</a></li>
+                    <li><a href="https://brasilescola.uol.com.br/sociologia/quilombolas.htm" target="_blank">Brasil Escola – Quilombolas</a></li>
+                    <li><a href="https://www.guiadoscuriosos.com.br/blog/historia-2/zumbi-dos-palmares/10-curiosidades-sobre-o-quilombo-dos-palmares/" target="_blank">Guia dos Curiosos – Palmares</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id) || document.getElementById('quilombolas');
+            if(element) element.scrollIntoView({ behavior: 'smooth' });
+        }
+        function showCard(id) {
+            const card = document.getElementById(id);
+            card.classList.add('show');
+        }
+        function hideCard(id) {
+            const card = document.getElementById(id);
+            card.classList.remove('show');
+        }
+    </script>
+</body>
+</html>
